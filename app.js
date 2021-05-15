@@ -1,6 +1,9 @@
 require("dotenv").config()
 
 const express = require('express')
+
+const cors = require('cors');
+
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const HttpError = require('./models/http-error')
@@ -12,6 +15,7 @@ const adminPageRoutes = require('./Routes/adminPage-routes');
 const port = 5000
 
 const app = express();
+app.use(cors());
 
 app.use(bodyParser.json());
 
