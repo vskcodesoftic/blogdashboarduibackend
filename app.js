@@ -66,10 +66,10 @@ app.use((error, req, res, next) => {
 
 
 
-  mongoose.connect(process.env.MONGO_PROD_URI,{  useNewUrlParser: true ,  useFindAndModify: false ,useUnifiedTopology: true  })
+  mongoose.connect(process.env.MONGO_PROD_URI,{  useNewUrlParser: true , useUnifiedTopology: true ,useFindAndModify : false ,'useCreateIndex' : true })
   .then(() => {
     console.log("server is live");
-    app.listen(process.env.PORT || 5000, function(){
+    app.listen(process.env.PORT || 8000, function(){
       console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
     });;
   
