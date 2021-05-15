@@ -2,6 +2,9 @@ require("dotenv").config()
 
 const express = require('express')
 
+//ejs
+const ejs = require('ejs');
+
 const cors = require('cors');
 
 const bodyParser = require('body-parser');
@@ -29,6 +32,14 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
     next();
   });
+
+
+// set public directory to serve static html files 
+app.use('/', express.static(path.join(__dirname, 'public'))); 
+
+// set public directory to serve static html files 
+app.use('/public', express.static(path.join(__dirname, 'public'))); 
+
 
 app.use(hompePageRoutes);
 app.use('/api/blogger',bloggerPageRoutes);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form action="http://localhost:8001/api/payment/pay/:basic" method="POST">
+    <div class="form-group">
+      <label for="CstFName">Email:</label>
+      <input type="text" class="form-control" id="CstFName" placeholder="Enter name" name="CstFName">
+    </div>
+    <div class="form-group">
+      <label for="pwd">email:</label>
+      <input type="email" class="form-control" id="CstEmail" placeholder="Enter email" name="CstEmail">
+    </div>
+    <div class="form-group">
+      <label for="pwd">number:</label>
+      <input type="number" class="form-control" id="CstMobile" placeholder="Enter number" name="CstMobile">
+    </div>
+ 
+    <div class="form-group">
+      <label for="pwd">number:</label>
+      <input type="text" class="form-control" id="ProductTitle" placeholder="Enter pro title" name="ProductTitle">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Creator Id:</label>
+      <input type="text" class="form-control" id="creator" placeholder="Enter creator id" name="creator">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
